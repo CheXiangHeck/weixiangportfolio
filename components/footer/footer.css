@@ -1,0 +1,13 @@
+@media (width <= 720px) {
+    .changeflex {
+        flex-direction: column;
+    }
+
+    .changewidth {
+        width: 100%;
+    }
+
+    .changefontsize {
+        font-size: small;
+    }
+}

@@ -1,0 +1,46 @@
+.background-Home {
+    background-image: url(Coding.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.floatanimation {
+    animation: floating 3s infinite ease-in-out;
+}
+
+.polygon {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+}
+
+@keyframes floating {
+    50%{
+        transform: translateY(10px);
+    }
+}
+
+@keyframes Forward {
+    0% {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+.polygonv2 {
+    clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 50% 95%, 0 100%);
+    background-image: url(coding-freak.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@media (width <= 720px) {
+    .TextSize{
+        font-size: 30px;
+    }
+    .FlexChange {
+        flex-direction: column;
+    }
+}
