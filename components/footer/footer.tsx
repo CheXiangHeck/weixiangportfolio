@@ -23,7 +23,7 @@ export function Footer() {
           My Portfolio
         </div>
         <div className="mt-7 font-Titan text-xl w-1/4 dark:text-white text-zinc-400 changewidth">
-          Let's Connect
+          Let&apos;s Connect
           <div className="flex items-center justify-around w-[200px] h-[50px] changewidth dark:bg-transparent bg-zinc-400 rounded-3xl my-4">
             <TooltipProvider>
               <Tooltip>
