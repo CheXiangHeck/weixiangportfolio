@@ -47,9 +47,9 @@ const components: { icon: LucideIcon; title: string; href: string }[] = [
 ];
 
 export const NavigationTop = () => (
-  <div className=" flex items-center justify-between h-[60px] backdrop-blur-3xl border-b-2 dark:border-zinc-700 border-cyan-300 px-6 gap-3 w-full z-10 dark:text-white text-cyan-300">
+  <div className=" flex items-center justify-between h-[60px] backdrop-blur-3xl border-b-2 dark:border-zinc-700 text-[#00FC82] border-[#00FC82] px-6 gap-3 w-full z-10 dark:text-white">
     <div className="font-Titan dark:text-white ">
-      <Link href="/Home">Anonymous Portfolio</Link>
+      <Link href="/anotherhome">Wei Xiang Portfolio</Link>
     </div>
     <TooltipProvider>
       <NavigationMenu className="justify-start">

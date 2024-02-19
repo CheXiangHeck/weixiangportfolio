@@ -11,10 +11,26 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ConfigProvider, Timeline } from "antd";
-import TimelineItem from "antd/es/timeline/TimelineItem";
-import { DesktopOutlined, KeyOutlined, PythonOutlined, RobotOutlined } from "@ant-design/icons";
+import {
+  DesktopOutlined,
+  KeyOutlined,
+  PythonOutlined,
+  RobotOutlined,
+} from "@ant-design/icons";
+import { SignIn } from "@clerk/nextjs";
 
 export default function About() {
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
@@ -41,15 +57,15 @@ export default function About() {
     >
       <div className="h-full snap-center flex flex-col items-center justify-center gap-2">
         <div className="Title flex flex-col items-center justify-center">
-          <h1 className=" font-WorkBench text-5xl text-cyan-500 flex items-center justify-center gap-7">
+          <h1 className=" font-Oswald text-5xl text-[#00FC82] brightness-110 flex items-center justify-center gap-7">
             <StarsIcon className="w-[50px] h-[50px]" /> About Me
           </h1>
-          <p className="font-Oswald text-cyan-200">CHEXIANGHECK</p>
+          <p className="font-Kanit text-[#83fac0]">CHEXIANGHECK</p>
         </div>
         <div className="h-[400px] w-full flex items-center justify-center gap-8 my-3 changeflexbox">
-          <Card className="h-[380px] w-1/4 text-cyan-300 changeCard">
+          <Card className="h-[380px] w-1/4 text-[#00FC82] changeCard">
             <CardHeader>
-              <CardTitle className=" font-WorkBench">INFORMATION</CardTitle>
+              <CardTitle className=" font-Kanit">Information</CardTitle>
               <CardDescription className="font-Oswald">
                 About Me
               </CardDescription>
@@ -68,11 +84,9 @@ export default function About() {
               </CardContent>
             </CardHeader>
           </Card>
-          <Card className="h-[380px] w-1/4 text-cyan-300 changeCard">
+          <Card className="h-[380px] w-1/4 text-[#00FC82] changeCard">
             <CardHeader>
-              <CardTitle className=" font-WorkBench">
-                Working Experience
-              </CardTitle>
+              <CardTitle className=" font-Kanit">Working Experience</CardTitle>
               <CardDescription className="font-Oswald">
                 My working experience
               </CardDescription>
@@ -95,9 +109,9 @@ export default function About() {
               </CardContent>
             </CardHeader>
           </Card>
-          <Card className="h-[380px] w-1/4 text-cyan-300 changeCard">
+          <Card className="h-[380px] w-1/4 text-[#00FC82] changeCard">
             <CardHeader>
-              <CardTitle className=" font-WorkBench">Skills Learnt</CardTitle>
+              <CardTitle className=" font-Kanit">Skills Learnt</CardTitle>
               <CardDescription className="font-Oswald">
                 Skills Leant for Past Two Years
               </CardDescription>
@@ -119,17 +133,17 @@ export default function About() {
           </Card>
         </div>
       </div>
-      <div className="h-full snap-center bg-cyan-200 p-10">
+      <div className="h-full snap-center  p-10 flex justify-center bg-[#75ffbc] items-center flexing">
         <div className="flex flex-col justify-center items-center">
-          <h1 className="text-cyan-300 font-WorkBench text-5xl">
-            <StarsIcon />
+          <h1 className="font-Oswald text-3xl flex">
+            <StarsIcon className="w-[80px] h-[80px]" />
             My Thoughts For My Future
           </h1>
-          <p className="text-zinc-300 font-Oswald">
+          <p className="text-zinc-300 font-Kanit">
             Thoughts on what I will do in the future.
           </p>
         </div>
-        <div className="w-[80%] md:w-[90%] h-[500px] font-Titan leading-7 text-neutral-500 content-Future overflow-y-scroll mt-15 page breh">
+        <div className="w-[80%] md:w-[90%] h-[500px] font-Titan leading-7 text-neutral-500 flex flex-col justify-center items-center content-Future overflow-y-scroll mt-15 page breh">
           <p className="m-5">
             I am currently getting myself prepared for the opportunity which is
             upcoming. I have learnt my lessons when I was finding for internship
@@ -149,10 +163,10 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="h-full snap-center p-20">
-        <div className="flex gap-5 text-5xl">
+      <div className="h-full snap-center p-20 flex justify-center items-center flex-col">
+        <div className="flex gap-5 text-5xl text-[#00FC82]">
           <TargetIcon className="w-[50px] h-[50px]" />
-          <h1 className="font-WorkBench">Target to Achieve 2024</h1>
+          <h1 className="font-Kanit font--size">Target to Achieve 2024</h1>
         </div>
         <div className="h-full overflow-y-scroll p-10 page">
           <ConfigProvider
@@ -192,8 +206,8 @@ export default function About() {
                   children: "Learn better on connecting API key",
                 },
                 {
-                  dot: <DesktopOutlined className="icon"/>,
-                  children: "Learn how to use Figma well."
+                  dot: <DesktopOutlined className="icon" />,
+                  children: "Learn how to use Figma well.",
                 },
               ]}
             />

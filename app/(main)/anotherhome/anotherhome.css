@@ -1,0 +1,83 @@
+.image {
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    background-image: url(../image/coding-freak.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.colorfont {
+    color: #00FC82;
+}
+
+.background-image {
+    background-image: radial-gradient(circle, #00FC82, black);
+    filter: blur(200px);
+}
+
+.header-text-hovereffect {
+    transition: all 0.2s ease-in-out;
+}
+
+.header-text-hovereffect:hover {
+    color:#00FC82;
+}
+
+.home-polygon{
+    animation: startanimation 1s 1s ease-in-out forwards;
+}
+
+.arrowdown {
+    clip-path: polygon(20% 0, 80% 0, 80% 60%, 100% 60%, 50% 100%, 0 60%, 20% 60%);
+    animation: Floating 1s ease-in-out infinite forwards;
+}
+
+@media (width < 780px) {
+    .content-Home {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.arrowdown:nth-child(2){
+    background: #00FC82;
+    position: absolute;
+    z-index: -1;
+    bottom: -2px;
+    left: 25px;
+}
+
+@media (width < 780px) {
+    .text {
+        font-size: x-large;
+    }
+}
+
+@keyframes startanimation {
+    100% {
+        transform: translateY(100%);
+        display: none;
+    }
+}
+
+@keyframes Floating {
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+.project-slider {
+    overflow-x: scroll;
+    mask: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+}
+
+.fadein-animation{
+    transform: translateX(-100%);
+    animation: FadeIn 1.3s 1s ease-in-out forwards;
+}
+
+@keyframes FadeIn {
+    100% {
+        transform: translateX(0);
+    }
+}
